@@ -1,12 +1,14 @@
 import { NgModule } from '@angular/core';
 import { ShareModule } from '../share/share.module';
+import { HomeModule } from './home/home.module';
 
 
 // 管理所有的页面模块
 @NgModule({
   declarations: [],
   imports: [
-    ShareModule
-  ]
+    HomeModule
+  ],
+  exports:[HomeModule]
 })
 export class PagesModule { }
