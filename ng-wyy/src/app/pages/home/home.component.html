@@ -14,6 +14,7 @@
         <div class="wrap">
             <div class="left">
                 <div class="sec">
+
                     <div class="up">
                         <div class="navs">
                             <h2>
@@ -21,12 +22,21 @@
                                 <a href="">热门推荐</a>
                             </h2>
                             <nav>
-                                <a href="">华语</a>
-                                <a href="">华语</a>
-                                <a href="">华语</a>
+                                <a href="" *ngFor="let item of hotTags">{{item.name}}</a>
                             </nav>
                         </div>
+                        <a href="">
+                            更多
+                            <em nz-icon nzType="arrow-right" theme="outline"></em>
+                        </a>
                     </div>
+
+                    <div class="down">
+                        <div class="down-wrap">
+                            <app-single-sheet></app-single-sheet>
+                        </div>
+                    </div>
+
                 </div>
             </div>
             <div class="right">right</div>
