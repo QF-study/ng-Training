@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { ShareModule } from '../share/share.module';
 import { HomeModule } from './home/home.module';
 
 
@@ -8,7 +7,6 @@ import { HomeModule } from './home/home.module';
   declarations: [],
   imports: [
     HomeModule
-  ],
-  exports:[HomeModule]
+  ]
 })
 export class PagesModule { }

@@ -1,1 +1,35 @@
-<p>home works!</p>
+<div class="home">
+    <app-wy-carousel #wyCarousel [activeIndex]="carouselActiveIndex" (changeSilde)="onChangeSilde($event)">
+        <nz-carousel nzAutoPlay nzEffect="fade" [nzDotRender]="wyCarousel.dotRef"
+            (nzBeforeChange)="onNzBeforeChange($event)">
+            <div class="carousel-item" nz-carousel-content *ngFor="let item of banners">
+                <a [href]="item.url" target="_blank" class="banner-item">
+                    <img appImgDefault [src]="item.imageUrl" />
+                </a>
+            </div>
+        </nz-carousel>
+    </app-wy-carousel>
+
+    <div class="main">
+        <div class="wrap">
+            <div class="left">
+                <div class="sec">
+                    <div class="up">
+                        <div class="navs">
+                            <h2>
+                                <i></i>
+                                <a href="">热门推荐</a>
+                            </h2>
+                            <nav>
+                                <a href="">华语</a>
+                                <a href="">华语</a>
+                                <a href="">华语</a>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right">right</div>
+        </div>
+    </div>
+</div>

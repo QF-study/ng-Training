@@ -5,6 +5,7 @@ import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
 import { NzInputModule } from 'ng-zorro-antd/input';
 import { NzIconModule } from 'ng-zorro-antd/icon';
+import { NzCarouselModule } from 'ng-zorro-antd/carousel';
 // 存放公共组件、指令、模块
 @NgModule({
   declarations: [],
@@ -14,7 +15,8 @@ import { NzIconModule } from 'ng-zorro-antd/icon';
     NzLayoutModule,
     NzMenuModule,
     NzInputModule,
-    NzIconModule
+    NzIconModule,
+    NzCarouselModule
   ],
   exports: [
     NzButtonModule,
@@ -22,6 +24,8 @@ import { NzIconModule } from 'ng-zorro-antd/icon';
     NzLayoutModule,
     NzMenuModule,
     NzInputModule,
-    NzIconModule]
+    NzIconModule,
+    NzCarouselModule
+  ]
 })
 export class ShareModule { }
