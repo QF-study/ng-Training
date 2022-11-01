@@ -3,7 +3,7 @@
         <em nz-icon class="arrow left" nzType="arrow-left" nzTheme="outline" (click)="onChangeSlide('pre')"></em>
         <ng-content></ng-content>
         <ng-template #dot let-number>
-            <em class="dot" [class.active]="activeIndex === number"></em>
+            <em class="dot" [class.active]="activeIndex === number"></em>               
         </ng-template>
         <em nz-icon class="arrow right" nzType="arrow-right" nzTheme="outline" (click)="onChangeSlide('next')"></em>
 
