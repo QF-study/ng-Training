@@ -5,14 +5,21 @@ export type Banner = {
 };
 
 export type HotTag = {
-  name: string;
   id: number;
+  name: string;
   position: number;
 }
 
 export type SongSheet = {
-  name: string;
   id: number;
+  name: string;
   picUrl: string;
   playCount: number;
+}
+
+export type Singer = {
+  id: number;
+  name:string;
+  picUrl:string;
+  albumSize: number;
 }

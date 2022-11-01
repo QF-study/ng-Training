@@ -9,7 +9,9 @@ import { NzCarouselModule } from 'ng-zorro-antd/carousel';
 import { WyUiModule } from './wy-ui/wy-ui.module';
 // 存放公共组件、指令、模块
 @NgModule({
-  declarations: [],
+  declarations: [
+    
+  ],
   imports: [
     WyUiModule,
     NzButtonModule,
@@ -28,7 +30,7 @@ import { WyUiModule } from './wy-ui/wy-ui.module';
     NzMenuModule,
     NzInputModule,
     NzIconModule,
-    NzCarouselModule
+    NzCarouselModule,
   ]
 })
 export class ShareModule { }

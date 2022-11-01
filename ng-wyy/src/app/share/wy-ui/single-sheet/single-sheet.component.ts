@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { SongSheet } from 'src/app/services/data-types/common.types';
 
 @Component({
   selector: 'app-single-sheet',
@@ -7,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SingleSheetComponent implements OnInit {
 
+  @Input() sheet!: SongSheet;
   constructor() { }
 
   ngOnInit(): void {
