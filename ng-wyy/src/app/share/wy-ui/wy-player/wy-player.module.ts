@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { WySliderModule } from '../wy-slider/wy-slider.module';
 import { WyPlayerComponent } from './wy-player.component';
 
 
@@ -8,6 +9,7 @@ import { WyPlayerComponent } from './wy-player.component';
     WyPlayerComponent
   ],
   imports: [
+    WySliderModule
   ],
   exports:[
     WyPlayerComponent

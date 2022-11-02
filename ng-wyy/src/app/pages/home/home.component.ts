@@ -4,6 +4,7 @@ import { NzCarouselComponent } from 'ng-zorro-antd/carousel';
 import { map } from 'rxjs';
 import { Banner, HotTag, Singer, SongSheet } from 'src/app/services/data-types/common.types';
 import { HomeService } from 'src/app/services/home.service';
+import { SheetService } from 'src/app/services/sheet.service';
 import { SingerService } from 'src/app/services/singer.service';
 
 @Component({
@@ -18,8 +19,7 @@ export class HomeComponent implements OnInit {
   songSheets: SongSheet[] = [];
   singers:Singer[] = [];
   @ViewChild(NzCarouselComponent, { static: true }) private nzCarousel!: NzCarouselComponent;
-  constructor(private homeServe: HomeService,
-    private singerServe: SingerService,
+  constructor(private sheetServe: SheetService,
     private route: ActivatedRoute) {
       console.log('route :>> ', this.route.data);
     this.route.data.pipe(map(res => res['homeDatas'])).subscribe(([banners, hotTags, songSheetList, singers])=> {
@@ -32,6 +32,12 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
 
+  }
+
+  //播放歌单事件
+  onPlaySheet(id:number){
+    this.sheetServe.playSheet(id).subscribe(res => {
+    })
   }
 
   onNzBeforeChange(btn : { to:number }) {

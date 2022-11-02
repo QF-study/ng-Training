@@ -16,9 +16,9 @@
           <em class="mask"></em>
         </div>
          <div class="play">
-          <div class="words clearfix">
-            <p class="ellipsis">歌名</p>
-            <ul>
+          <div class="words clearfix hidden">
+            <p class="ellipsis margin-bottom-none">歌名</p>
+            <ul class="songs clearfix margin-bottom-none">
               <li>
                 <a href="">歌手1</a>
               </li>
@@ -29,7 +29,7 @@
           </div>
           <div class="bar">
             <div class="slider-wrap">
-              <div>进度条</div>
+              <app-wy-slider></app-wy-slider>
             </div>
             <span class="time">
               <em>02:11</em> / 04:35
@@ -42,10 +42,12 @@
           <em class="share" title="分享"></em>
          </div>
 
-         
          <div class="ctrl                                       ">
-          <em class="like" title="收藏"></em>
-          <em class="share" title="分享"></em>
+          <em class="volume" title="音量"></em>
+          <em class="loop" title="循环"></em>
+          <p class="open">
+            <span></span>
+          </p>
          </div>
 
       </div>
