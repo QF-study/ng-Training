@@ -1,14 +1,27 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { wysliderStyle } from './wy-slider-type';
 
 @Component({
   selector: 'app-wy-slider-handle',
-  template: `  <div class="wy-slider-handle"></div>`,
+  template: ` <div class="wy-slider-handle" [ngStyle]="style"></div>`,
+  changeDetection: ChangeDetectionStrategy.OnPush
+
 })
-export class WySliderHandleComponent implements OnInit {
+export class WySliderHandleComponent implements OnInit, OnChanges {
+  @Input() wyVertical = false;
+  @Input() wyOffset!: number;
 
-  constructor() { }
+  style:wysliderStyle = {};
+  constructor() {}
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+  
+  ngOnChanges(changes: SimpleChanges): void {
+    //监听wyOffset发生变化
+    if(changes['wyOffset']){
+      this.style[this.wyVertical ? 'bottom' :'left'] = this.wyOffset + '%';
+
+    }
   }
 
 }

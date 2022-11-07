@@ -5,7 +5,7 @@ import { Banner, HotTag, SongSheet } from './data-types/common.types';
 import { API_CONFIG, ServicesModule } from './services.module';
 
 @Injectable({
-  providedIn: ServicesModule
+  providedIn: ServicesModule 
 })
 export class HomeService {
 

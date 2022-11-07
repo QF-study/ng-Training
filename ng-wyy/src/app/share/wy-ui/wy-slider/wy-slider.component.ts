@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-wy-slider',
@@ -9,10 +9,12 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.None
 })
 export class WySliderComponent implements OnInit {
-
+  @ViewChild('wySlider', { static: true }) private wySlider!: ElementRef; 
   constructor() { }
 
   ngOnInit(): void {
+    console.log('el:' + this.wySlider.nativeElement);
+    
   }
 
 }

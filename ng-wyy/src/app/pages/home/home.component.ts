@@ -27,6 +27,8 @@ export class HomeComponent implements OnInit {
       this.hotTags = hotTags;
       this.songSheets = songSheetList;
       this.singers = singers;
+      console.log(singers);
+      
     })
   }
 

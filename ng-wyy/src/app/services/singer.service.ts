@@ -1,6 +1,6 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Inject, Injectable } from '@angular/core';
-import { map, Observable } from 'rxjs';
+import { map, Observable, take } from 'rxjs';
 import { Singer } from './data-types/common.types';
 import { API_CONFIG } from './services.module';
 
@@ -28,6 +28,6 @@ export class SingerService {
   getEnterSinger(args: SingerParams = defaultParams): Observable<Singer[]> {
     const params = new HttpParams({ fromString: JSON.stringify(args) });
     return this.http.get<any>(this.uri + 'artist/list', { params })
-      .pipe(map(((res: { artists: Singer[] }) => res.artists)));
+      .pipe(map(((res: { artists: Singer[] }) => res.artists.splice(0, 10))));
   }
 }
