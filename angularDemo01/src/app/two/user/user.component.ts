@@ -25,5 +25,4 @@ export class UserComponent implements OnInit, OnChanges, DoCheck {
   ngOnInit(): void {
     console.log(this.videos);
   }
-
 }

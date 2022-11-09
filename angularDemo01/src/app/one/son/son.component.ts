@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Input, OnInit, SimpleChanges } from '@angular/core';
+import { ChangeDetectionStrategy, Component, ElementRef, EventEmitter, Input, NgZone, OnInit, Output, SimpleChanges, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-son',
@@ -12,7 +12,10 @@ export class SonComponent implements OnInit {
   obj = {
     num:12
   }
-  constructor() {
+  @Output() enter = new EventEmitter();
+  @ViewChild("input", { read: ElementRef }) inputElementRef !: ElementRef;
+  searchValue:string = '';
+  constructor(private ngZone: NgZone, private elementRef: ElementRef<HTMLElement>) {
     console.log('Son constructor');
   }
 
@@ -28,6 +31,19 @@ export class SonComponent implements OnInit {
   }
   ngAfterViewInit(): void {
     console.log('ngAfterViewInit');
+    this.inputElementRef.nativeElement.addEventListener(
+      "keydown",
+      (event: KeyboardEvent) => {
+        const keyCode = event.which || event.keyCode;
+        if (keyCode === 13) {
+          this.search();
+        }
+      }
+    );
+
+  }
+
+  search() {
     
   }
   ngAfterContentChecked(): void {
