@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
-import { wysliderStyle } from './wy-slider-type';
+import { SliderValue, wysliderStyle } from './wy-slider-type';
 
 @Component({
   selector: 'app-wy-slider-track',
@@ -8,7 +8,7 @@ import { wysliderStyle } from './wy-slider-type';
 })
 export class WySliderTrackComponent implements OnInit, OnChanges {
   @Input() wyVertical = false;
-  @Input() wyLength!: number;
+  @Input() wyLength!: SliderValue;
   
   style:wysliderStyle = {};
   

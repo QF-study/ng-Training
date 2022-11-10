@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
-import { wysliderStyle } from './wy-slider-type';
+import { SliderValue, wysliderStyle } from './wy-slider-type';
 
 @Component({
   selector: 'app-wy-slider-handle',
@@ -9,7 +9,7 @@ import { wysliderStyle } from './wy-slider-type';
 })
 export class WySliderHandleComponent implements OnInit, OnChanges {
   @Input() wyVertical = false;
-  @Input() wyOffset!: number;
+  @Input() wyOffset!: SliderValue;
 
   style:wysliderStyle = {};
   constructor() {}

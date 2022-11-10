@@ -16,5 +16,6 @@ export type SliderEventObserverConfig = {
     startPlucked$?: Observable<number>;
     moveResolved$?: Observable<number>;
     end$?: Observable<Event>;
-
 }
+
+export type SliderValue = number | null;
