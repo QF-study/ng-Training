@@ -20,7 +20,6 @@ export class WySliderHandleComponent implements OnInit, OnChanges {
     //监听wyOffset发生变化
     if(changes['wyOffset']){
       this.style[this.wyVertical ? 'bottom' :'left'] = this.wyOffset + '%';
-
     }
   }
 

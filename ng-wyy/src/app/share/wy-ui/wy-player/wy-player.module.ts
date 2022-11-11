@@ -11,7 +11,7 @@ import { WyPlayerComponent } from './wy-player.component';
   imports: [
     WySliderModule
   ],
-  exports:[
+  exports: [
     WyPlayerComponent
   ]
 })

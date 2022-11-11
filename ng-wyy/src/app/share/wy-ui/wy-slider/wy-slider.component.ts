@@ -114,6 +114,8 @@ export class WySliderComponent implements OnInit {
 
   private onDragStart(value: number) {
     this.toggleDragMoving(true);
+    this.setValue(value);
+
   }
 
   private onDragMove(value: number) {
@@ -134,11 +136,11 @@ export class WySliderComponent implements OnInit {
     this.updateTrackAndHandles(value);
   }
 
-  private updateTrackAndHandles(value: SliderValue){
+  private updateTrackAndHandles(value: SliderValue) {
     this.offset = this.getValueToOffset(value);
   }
 
-  private getValueToOffset(value: SliderValue): SliderValue{
+  private getValueToOffset(value: SliderValue): SliderValue {
     return getPercent(this.wyMin, this.wyMax, value as number);
   }
 
