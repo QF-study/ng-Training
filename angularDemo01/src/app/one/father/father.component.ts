@@ -42,5 +42,4 @@ export class FatherComponent implements OnInit, DoCheck, OnChanges, AfterContent
   clickMethod(){
     this.num++;
   }
-
 }

@@ -37,6 +37,7 @@ export class SonComponent implements OnInit {
         const keyCode = event.which || event.keyCode;
         if (keyCode === 13) {
           this.search();
+          let a = new Date().getHours()
         }
       }
     );

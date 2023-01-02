@@ -11,9 +11,9 @@ import zh from '@angular/common/locales/zh';
 import { registerLocaleData } from '@angular/common';
 import { NZ_I18N } from 'ng-zorro-antd/i18n';
 import { zh_CN } from 'ng-zorro-antd/i18n';
+import { AppStoreModule } from '../store';
 
 registerLocaleData(zh);
-
 
 @NgModule({
   declarations: [],
@@ -26,18 +26,18 @@ registerLocaleData(zh);
     PagesModule,
     ServicesModule,
     ShareModule,
-    AppRoutingModule
+    AppStoreModule,
+    AppRoutingModule,
   ],
   providers: [{ provide: NZ_I18N, useValue: zh_CN }],
-  exports:[ShareModule,
-    AppRoutingModule]
+  exports: [ShareModule, AppRoutingModule],
 })
-export class CoreModule { 
+export class CoreModule {
   // @SkipSelf()：跳过自身去父module找
   //@Optional(): 没找到是会赋值为null  而不是报错
-  constructor(@SkipSelf() @Optional() parentModule:CoreModule){
-    if(parentModule){
-      throw new Error("CoreModule 只能被AppModule引入");
+  constructor(@SkipSelf() @Optional() parentModule: CoreModule) {
+    if (parentModule) {
+      throw new Error('CoreModule 只能被AppModule引入');
     }
   }
 }
