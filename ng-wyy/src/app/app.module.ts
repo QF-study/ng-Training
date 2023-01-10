@@ -12,10 +12,7 @@ import { environment } from '../environments/environment';
   ],
   imports: [
     CoreModule,
-    StoreModule.forRoot({}, {}),
-    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production })
-  ],
-  
+   ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

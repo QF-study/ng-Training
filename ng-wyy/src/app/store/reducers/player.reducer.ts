@@ -34,15 +34,15 @@ export const initialState: PlayState = {
   currentIndex: -1,
 };
 
-const reducer = createReducer(
+export const playerReducer = createReducer(
   initialState,
   on(SetPlaying, (state, { playing }) => ({ ...state, playing })),
   on(SetPlayList, (state, { playList }) => ({ ...state, playList })),
-  on(SetSongList, (state, { playList }) => ({ ...state, playList })),
+  on(SetSongList, (state, { songList }) => ({ ...state, songList })),
   on(SetPlayMode, (state, { playMode }) => ({ ...state, playMode })),
   on(SetCurrentIndex, (state, { currentIndex }) => ({ ...state, currentIndex }))
 );
 
-export function playerReducer(state: PlayState, action: Action) {
-  return reducer(state, action);
-}
+//  function playerReducer(state: PlayState, action: Action) {
+//   return reducer(state, action);
+// }

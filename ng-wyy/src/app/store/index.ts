@@ -7,18 +7,21 @@ import { playerReducer } from './reducers/player.reducer';
 @NgModule({
   declarations: [],
   imports: [
-    StoreModule.forRoot(playerReducer, {
-      runtimeChecks: {
-        strictStateImmutability: true,
-        strictActionImmutability: true,
-        strictStateSerializability: true,
-        strictActionSerializability: true,
-      },
-    }),
+    StoreModule.forRoot(
+      { player: playerReducer },
+      {
+        runtimeChecks: {
+          strictStateImmutability: true,
+          strictActionImmutability: true,
+          strictStateSerializability: true,
+          strictActionSerializability: true,
+        },
+      }
+    ),
     StoreDevtoolsModule.instrument({
       maxAge: 20,
-      logOnly: environment.production
-    })
+      logOnly: environment.production,
+    }),
   ],
 })
 export class AppStoreModule {}

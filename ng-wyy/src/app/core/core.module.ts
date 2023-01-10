@@ -30,7 +30,7 @@ registerLocaleData(zh);
     AppRoutingModule,
   ],
   providers: [{ provide: NZ_I18N, useValue: zh_CN }],
-  exports: [ShareModule, AppRoutingModule],
+  exports: [ShareModule, AppStoreModule, AppRoutingModule],
 })
 export class CoreModule {
   // @SkipSelf()：跳过自身去父module找

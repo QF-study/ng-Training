@@ -12,7 +12,7 @@ export const SetPlayList = createAction(
 );
 export const SetSongList = createAction(
   '[player] Set SongList',
-  props<{ playList: Song[] }>()
+  props<{ songList: Song[] }>()
 );
 export const SetPlayMode = createAction(
   '[player] Set playMode',

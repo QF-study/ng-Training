@@ -41,7 +41,6 @@ export class SonComponent implements OnInit {
         }
       }
     );
-
   }
 
   search() {
